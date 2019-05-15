@@ -12,7 +12,7 @@
   $person1->set_bodymass(300);
 
   // Geef de class variable length weer op de pagina
-  echo "Hallo " . $person1->firstname . ", je massa is " . $person1->bodymass . "kg en je lengte is: " . $person1->bodylength . "m<hr>";
+  echo "Hallo " . $person1->firstname . ", je massa is " . $person1->get_bodymass() . " en je lengte is: " . $person1->get_bodylength() . "<hr>";
   $person1->welkom();
   // Maak een nieuwe instantie van de class BmiCalculator
   $person2 = new BmiCalculator(['firstname'=>'Evelien',

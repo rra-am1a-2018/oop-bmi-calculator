@@ -25,6 +25,14 @@ class BmiCalculator extends Person {
     }
   }
 
+  public function get_bodylength() {
+    return $this->bodylength . "m";
+  }
+
+  public function get_bodymass() {
+    return $this->bodymass . "kg";
+  }
+
   public function set_bodymass($bodymass) {
     if ( $bodymass < 2 || $bodymass > 750 ) {
       echo "Uw massa is hoogstwaarschijnlijk niet correct opgegeven";
