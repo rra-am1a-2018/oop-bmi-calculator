@@ -5,7 +5,7 @@
   $person1 = new BmiCalculator();
 
   // Geef de class variabeles een waarde
-  $person1->firstname = "Arjan";
+  $person1->firstname = 'Arjan';
   $person1->infix = 'de';
   $person1->lastname = 'Ruijter';
   $person1->set_bodylength(1.8);

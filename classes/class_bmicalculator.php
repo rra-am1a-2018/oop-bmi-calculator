@@ -1,11 +1,13 @@
 <?php
 
 class Person {
-  var $firstname;
-  var $infix;
-  var $lastname;
+  protected $firstname;
+  protected $infix;
+  protected $lastname;
 
-  function make_full_name() {
+  // Maak setters voor $firstname, $infix en $lastname
+
+  protected function make_full_name() {
     return $this->firstname . " " . $this->infix . " " . $this->lastname;
   }
 }
@@ -23,16 +25,7 @@ class BmiCalculator extends Person {
     } else {
       $this->bodylength = $bodylength;
     }
-  }
-
-  public function get_bodylength() {
-    return $this->bodylength . "m";
-  }
-
-  public function get_bodymass() {
-    return $this->bodymass . "kg";
-  }
-
+  }  
   public function set_bodymass($bodymass) {
     if ( $bodymass < 2 || $bodymass > 750 ) {
       echo "Uw massa is hoogstwaarschijnlijk niet correct opgegeven";
@@ -40,12 +33,17 @@ class BmiCalculator extends Person {
     } else {
       $this->bodymass = $bodymass;
     }
+  }  
+  public function get_bodylength() {
+    return $this->bodylength . "m";
   }
-
+  public function get_bodymass() {
+    return $this->bodymass . "kg";
+  }
   
 
   // We gaan de constructor van de class maken. De constructor wordt altijd automagical aangeroepen wanneer we het woordje new gebruiken.
-  function __construct($args = []) {
+  public function __construct($args = []) {
     $this->firstname = $args['firstname'] ?? 'voornaam onbekend';
     $this->infix = $args['infix'] ?? 'tussenvoegsel onbekend';
     $this->lastname = $args['lastname'] ?? 'achternaam onbekend';
@@ -53,13 +51,13 @@ class BmiCalculator extends Person {
     $this->bodylength = $args['bodylength'] ?? 1;
   }
 
-  function welkom() {
+  public function welkom() {
     echo "Hallo " . $this->make_full_name() . ", je massa is " . $this->bodymass . "kg en je lengte is: " . $this->bodylength . "m. Je BMI-waarde is: " . $this->calculate_bmi() . "<hr>";
   }
 
   // Maak een method die met de bodymass en bodylength de bmi berekent
-  // round(waarde, 1)
-  function calculate_bmi() {
+  // round(waarde, 1). Dit is een soort helperclass voor intern gebruik binnen de class
+  private function calculate_bmi() {
     return round($this->bodymass / ($this->bodylength * $this->bodylength), 1);
   }
 
