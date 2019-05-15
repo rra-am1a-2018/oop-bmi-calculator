@@ -7,10 +7,10 @@ class BmiCalculator {
   var $bodylength; 
 
   // We gaan de constructor van de class maken. De constructor wordt altijd automagical aangeroepen wanneer we het woordje new gebruiken.
-  function __construct($name='', $bodymass=0, $bodylength=0) {
-    $this->name = $name;
-    $this->bodymass = $bodymass;
-    $this->bodylength = $bodylength;
+  function __construct($args = []) {
+    $this->name = $args['name'] ?? 'onbekend';
+    $this->bodymass = $args['bodymass'] ?? 0;
+    $this->bodylength = $args['bodylength'] ?? 1;
   }
 
   function welkom() {
