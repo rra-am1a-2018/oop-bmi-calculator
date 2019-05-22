@@ -61,13 +61,21 @@ class BmiCalculator extends Person {
       case ($bmi >= 18.5 && $bmi < 25):
         $interpretation = "U heeft normaal gewicht";
         break;
-      case ($bmi < 18.5):
-        $interpretation = "U heeft ondergewicht";
+      case ($bmi >= 25 && $bmi < 27):
+        $interpretation = "U heeft licht overgewicht";
         break;
-      case ($bmi < 18.5):
-        $interpretation = "U heeft ondergewicht";
+      case ($bmi >= 27 && $bmi < 30):
+        $interpretation = "U heeft matig overgewicht";
         break;
-      case...
+      case ($bmi >= 30 && $bmi < 40):
+        $interpretation = "U heeft ernstig overgewicht";
+        break;
+      case ($bmi >= 40):
+        $interpretation = "U heeft ziekelijk overgewicht";
+        break;
+      default:
+        $interpretation = "Wij kunnen geen uitspraak doen over uw gewicht";
+        break;
     }
     return $interpretation;
   }
