@@ -1,16 +1,5 @@
 <?php
-
-class Person {
-  protected $firstname;
-  protected $infix;
-  protected $lastname;
-
-  // Maak setters voor $firstname, $infix en $lastname
-
-  protected function make_full_name() {
-    return $this->firstname . " " . $this->infix . " " . $this->lastname;
-  }
-}
+include("./classes/class_person.php");
 
 class BmiCalculator extends Person {
   // Dit zijn de classvariables die je ook wel Fields noemt  
@@ -47,12 +36,13 @@ class BmiCalculator extends Person {
     $this->firstname = $args['firstname'] ?? 'voornaam onbekend';
     $this->infix = $args['infix'] ?? 'tussenvoegsel onbekend';
     $this->lastname = $args['lastname'] ?? 'achternaam onbekend';
-    $this->bodymass = $args['bodymass'] ?? 0;
+    $bodymass = $args['bodymass'] ?? 0;
+    $this->set_bodymass($bodymass);
     $this->bodylength = $args['bodylength'] ?? 1;
   }
 
   public function welkom() {
-    echo "Hallo " . $this->make_full_name() . ", je massa is " . $this->bodymass . "kg en je lengte is: " . $this->bodylength . "m. Je BMI-waarde is: " . $this->calculate_bmi() . "<hr>";
+    echo "Hallo " . $this->make_full_name() . "<br>Je massa is " . $this->bodymass . "kg<br> Je lengte is: " . $this->bodylength . "m.<br>Je BMI-waarde is: " . $this->calculate_bmi() . "<br>" . $this->interpretation_bmi() . "<hr>";
   }
 
   // Maak een method die met de bodymass en bodylength de bmi berekent
@@ -60,6 +50,28 @@ class BmiCalculator extends Person {
   private function calculate_bmi() {
     return round($this->bodymass / ($this->bodylength * $this->bodylength), 1);
   }
+
+  private function interpretation_bmi() {
+    $interpretation = "";
+    $bmi = $this->calculate_bmi();
+    switch(true) {
+      case ($bmi < 18.5):
+        $interpretation = "U heeft ondergewicht";
+        break;
+      case ($bmi >= 18.5 && $bmi < 25):
+        $interpretation = "U heeft normaal gewicht";
+        break;
+      case ($bmi < 18.5):
+        $interpretation = "U heeft ondergewicht";
+        break;
+      case ($bmi < 18.5):
+        $interpretation = "U heeft ondergewicht";
+        break;
+      case...
+    }
+    return $interpretation;
+  }
+
 
 }
 
