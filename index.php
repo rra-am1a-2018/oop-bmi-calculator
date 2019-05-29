@@ -23,7 +23,7 @@
               <div class="form-row">
                 <div class="form-group col-4">
                   <label for="firstname">Voornaam</label>
-                  <input type="text" class="form-control" id="firstname" placeholder="" name="firstname">
+                  <input type="text" class="form-control" id="firstname" placeholder="" name="firstname" required>
                 </div>
                 <div class="form-group col-4">
                   <label for="infix">Tussenvoegsel</label>
@@ -31,21 +31,21 @@
                 </div>
                 <div class="form-group col-4">
                   <label for="lastname">Achternaam</label>
-                  <input type="text" class="form-control" id="lastname" placeholder="" name="lastname">
+                  <input type="text" class="form-control" id="lastname" placeholder="" name="lastname" required>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-4">
                   <label for="bodymass">Gewicht</label>
-                  <input type="number" step="any" class="form-control" id="bodymass" placeholder="" name="bodymass">
+                  <input type="number" step="any" class="form-control" id="bodymass" placeholder="" name="bodymass" min="0" max="800" required>
                 </div>
                 <div class="form-group col-4">
                   <label for="bodylength">Lengte</label>
-                  <input type="number" step="any" class="form-control" id="bodylength" placeholder="" name="bodylength">
+                  <input type="number" step="any" class="form-control" id="bodylength" placeholder="" name="bodylength" min="0.81" max="2.80" required>
                 </div>
                 <div class="form-group col-4">
                   <label for="age">Leeftijd</label>
-                  <input type="number" class="form-control" id="age" placeholder="" name="age">
+                  <input type="number" class="form-control" id="age" placeholder="" name="age" min="0" max="150" required >
                 </div>
               </div>  
               <div class="form-row"> 
@@ -84,6 +84,49 @@
           </div>
           <div class="col-4"></div>
         </div>
+      </section>
+      <section>
+      <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Voornaam</th>
+      <th scope="col"></th>
+      <th scope="col">Achternaam</th>
+      <th scope="col">Gewicht</th>
+      <th scope="col">Lengte</th>
+      <th scope="col">Leeftijd</th>
+      <th scope="col">Geslacht</th>
+      <th scope="col">BMI</th>      
+      <th scope="col">Uitspraak</th>      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>de</td>
+      <td>Beer</td>
+      <td>123,4</td>
+      <td>1,81</td>
+      <td>29</td>
+      <td>man</td>
+      <td>34</td>
+      <td>Er is sprake van ernstig overgewicht</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
       </section>
 
     </main>
