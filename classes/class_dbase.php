@@ -47,6 +47,10 @@ class Dbase {
     $data = $this->conn->real_escape_string($data);
     return $data;
   }
+
+  public function select_all() {
+    $sql = "SELECT * FROM `bmi_data`";
+  }
 }
 
 ?>
