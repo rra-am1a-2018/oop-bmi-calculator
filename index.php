@@ -47,27 +47,39 @@
                   <label for="age">Leeftijd</label>
                   <input type="number" class="form-control" id="age" placeholder="">
                 </div>
-              </div>       
-              <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                  <label class="form-check-label" for="exampleRadios1">
-                    Man
-                  </label>
-              </div>
-              <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                  <label class="form-check-label" for="exampleRadios2">
-                    Vrouw
-                  </label>
-              </div>
-              <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-                  <label class="form-check-label" for="exampleRadios3">
-                    Disabled radio
-                  </label>
+              </div>  
+              <div class="form-row"> 
+                <div class="form-group col-4">    
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="male" checked>
+                      <label class="form-check-label" for="exampleRadios1">
+                        Man
+                      </label>
+                  </div>  
+                </div>   
+                <div class="form-group col-4">         
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="female">
+                      <label class="form-check-label" for="exampleRadios2">
+                        Vrouw
+                      </label>
+                  </div>
+                </div>
+                <div class="form-group col-4">
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="trans">
+                      <label class="form-check-label" for="exampleRadios3">
+                        Trans
+                      </label>
+                  </div>
+                </div>
               </div>
               
-              <button type="submit" class="btn btn-primary btn-lg btn-block">Bereken BMI</button>
+              <div class="form-row">
+                <div class="form-group col-12">              
+                  <button type="submit" class="btn btn-primary btn-lg btn-block">Bereken BMI</button>
+                </div>
+              </div>
             </form>            
           </div>
           <div class="col-4"></div>

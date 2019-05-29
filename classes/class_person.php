@@ -18,14 +18,14 @@ class Person {
     $this->infix = $infix;
   }
   public function get_infix() {
-    return $this->$infix;
+    return $this->infix;
   }
 
   public function set_lastname($lastname) {
     $this->lastname = $lastname;
   }
   public function get_lastname() {
-    return $this->$lastname;
+    return $this->lastname;
   }
 
 

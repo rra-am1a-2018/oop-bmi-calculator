@@ -1,6 +1,8 @@
 .container-fluid {
-  background-color: blue;
+  background-color: lightblue;
   color: white;
   padding: 1em;
   text-align: center;
+  margin-bottom: 1em;
 }
+
