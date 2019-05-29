@@ -19,39 +19,39 @@
         <div class="row">
           <div class="col-4"></div>
           <div class="col-4">
-            <form>
+            <form action="./calculate_bmi.php" method="post">
               <div class="form-row">
                 <div class="form-group col-4">
                   <label for="firstname">Voornaam</label>
-                  <input type="text" class="form-control" id="firstname" placeholder="">
+                  <input type="text" class="form-control" id="firstname" placeholder="" name="firstname">
                 </div>
                 <div class="form-group col-4">
                   <label for="infix">Tussenvoegsel</label>
-                  <input type="text" class="form-control" id="infix" placeholder="">
+                  <input type="text" class="form-control" id="infix" placeholder="" name="infix">
                 </div>
                 <div class="form-group col-4">
                   <label for="lastname">Achternaam</label>
-                  <input type="text" class="form-control" id="lastname" placeholder="">
+                  <input type="text" class="form-control" id="lastname" placeholder="" name="lastname">
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-4">
                   <label for="bodymass">Gewicht</label>
-                  <input type="number" step="any" class="form-control" id="bodymass" placeholder="">
+                  <input type="number" step="any" class="form-control" id="bodymass" placeholder="" name="bodymass">
                 </div>
                 <div class="form-group col-4">
                   <label for="bodylength">Lengte</label>
-                  <input type="number" step="any" class="form-control" id="bodylength" placeholder="">
+                  <input type="number" step="any" class="form-control" id="bodylength" placeholder="" name="bodylength">
                 </div>
                 <div class="form-group col-4">
                   <label for="age">Leeftijd</label>
-                  <input type="number" class="form-control" id="age" placeholder="">
+                  <input type="number" class="form-control" id="age" placeholder="" name="age">
                 </div>
               </div>  
               <div class="form-row"> 
                 <div class="form-group col-4">    
                   <div class="form-check">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="male" checked>
+                      <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="male" checked>
                       <label class="form-check-label" for="exampleRadios1">
                         Man
                       </label>
@@ -59,7 +59,7 @@
                 </div>   
                 <div class="form-group col-4">         
                   <div class="form-check">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="female">
+                      <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="female">
                       <label class="form-check-label" for="exampleRadios2">
                         Vrouw
                       </label>
@@ -67,7 +67,7 @@
                 </div>
                 <div class="form-group col-4">
                   <div class="form-check">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="trans">
+                      <input class="form-check-input" type="radio" name="gender" id="exampleRadios3" value="trans">
                       <label class="form-check-label" for="exampleRadios3">
                         Trans
                       </label>
