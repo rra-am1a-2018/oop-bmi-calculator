@@ -90,48 +90,25 @@
         </div>
       </section>
       <section>
-      <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Voornaam</th>
-      <th scope="col"></th>
-      <th scope="col">Achternaam</th>
-      <th scope="col">Gewicht</th>
-      <th scope="col">Lengte</th>
-      <th scope="col">Leeftijd</th>
-      <th scope="col">Geslacht</th>
-      <th scope="col">BMI</th>      
-      <th scope="col">Uitspraak</th>      
-    </tr>
-  </thead>
-  <tbody>
-    <?php $dbase->select_all(); ?>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>de</td>
-      <td>Beer</td>
-      <td>123,4</td>
-      <td>1,81</td>
-      <td>29</td>
-      <td>man</td>
-      <td>34</td>
-      <td>Er is sprake van ernstig overgewicht</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Voornaam</th>
+              <th scope="col"></th>
+              <th scope="col">Achternaam</th>
+              <th scope="col">Gewicht</th>
+              <th scope="col">Lengte</th>
+              <th scope="col">Leeftijd</th>
+              <th scope="col">Geslacht</th>
+              <th scope="col">BMI</th>      
+              <th scope="col">Uitspraak</th>      
+            </tr>
+          </thead>
+          <tbody>
+            <?php $dbase->select_all(); ?>
+          </tbody>
+        </table>
       </section>
 
     </main>
@@ -148,36 +125,36 @@
 
 
 <?php
-  include("./classes/class_bmicalculator.php");
+  // include("./classes/class_bmicalculator.php");
 
-  // Maak een object van de class BmiCalculator
-  $person1 = new BmiCalculator();
+  // // Maak een object van de class BmiCalculator
+  // $person1 = new BmiCalculator();
 
-  // Geef de class variabeles een waarde
-  $person1->set_firstname('Arjan');
-  $person1->set_infix('de');
-  $person1->set_lastname('Ruijter');
-  $person1->set_bodylength(1.8);
-  $person1->set_bodymass(300);
+  // // Geef de class variabeles een waarde
+  // $person1->set_firstname('Arjan');
+  // $person1->set_infix('de');
+  // $person1->set_lastname('Ruijter');
+  // $person1->set_bodylength(1.8);
+  // $person1->set_bodymass(300);
 
-  // Geef de class variable length weer op de pagina
-  echo "Hallo " . $person1->get_firstname() . ", je massa is " . $person1->get_bodymass() . " en je lengte is: " . $person1->get_bodylength() . "<hr>";
-  $person1->welkom();
-  // Maak een nieuwe instantie van de class BmiCalculator
-  $person2 = new BmiCalculator(['firstname'=>'Evelien',
-                                'infix'=>'van der',
-                                'lastname'=>'Veer',
-                                'bodymass'=>60, 
-                                'bodylength'=>1.65]);
+  // // Geef de class variable length weer op de pagina
+  // echo "Hallo " . $person1->get_firstname() . ", je massa is " . $person1->get_bodymass() . " en je lengte is: " . $person1->get_bodylength() . "<hr>";
+  // $person1->welkom();
+  // // Maak een nieuwe instantie van de class BmiCalculator
+  // $person2 = new BmiCalculator(['firstname'=>'Evelien',
+  //                               'infix'=>'van der',
+  //                               'lastname'=>'Veer',
+  //                               'bodymass'=>60, 
+  //                               'bodylength'=>1.65]);
 
-  // Roep de welkom() method van de class BmiCalculator
-  $person2->welkom();
+  // // Roep de welkom() method van de class BmiCalculator
+  // $person2->welkom();
 
-  $person3 = new BmiCalculator(['firstname'=>'Fred',
-                                'infix'=>'de',
-                                'lastname'=>'Beer',
-                                'bodymass'=>7500, 
-                                'bodylength'=>1.8]);
-  $person3->welkom();
+  // $person3 = new BmiCalculator(['firstname'=>'Fred',
+  //                               'infix'=>'de',
+  //                               'lastname'=>'Beer',
+  //                               'bodymass'=>7500, 
+  //                               'bodylength'=>1.8]);
+  // $person3->welkom();
   
 ?>

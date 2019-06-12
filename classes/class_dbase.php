@@ -49,10 +49,12 @@ class Dbase {
   }
 
   public function select_all() {
+    include("./classes/class_bmicalculator.php");
     $sql = "SELECT * FROM `bmi_data`";
     $result = $this->conn->query($sql);
     while ($row = $result->fetch_assoc()) {
       // Maak hier een <tr><td> constructie voor de table op index.php
+      $bmi_calc = new BmiCalculator(["bodymass" => $row["bodymass"], "bodylength" => $row["bodylength"]]);
       echo "<tr>
               <th scope='row'>".$row["id"] ."</th>
               <td>".$row["firstname"] ."</td>
@@ -61,6 +63,8 @@ class Dbase {
               <td>".$row["bodymass"] ."</td>
               <td>".$row["bodylength"] ."</td>
               <td>".$row["age"] ."</td>
+              <td>".$row["gender"] ."</td>
+              <td>".$bmi_calc->calculate_bmi() ."</td>
               <td>".$row["gender"] ."</td>
             </tr>";
     }

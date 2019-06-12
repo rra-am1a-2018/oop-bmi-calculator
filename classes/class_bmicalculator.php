@@ -47,7 +47,7 @@ class BmiCalculator extends Person {
 
   // Maak een method die met de bodymass en bodylength de bmi berekent
   // round(waarde, 1). Dit is een soort helperclass voor intern gebruik binnen de class
-  private function calculate_bmi() {
+  public function calculate_bmi() {
     return round($this->bodymass / ($this->bodylength * $this->bodylength), 1);
   }
 
