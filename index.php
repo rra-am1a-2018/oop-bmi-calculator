@@ -1,7 +1,6 @@
 <?php 
   include("./classes/class_dbase.php");
   $dbase = new Dbase();
-  $dbase->select_all();
 ?>
 <!doctype html>
 <html lang="en">
@@ -107,6 +106,7 @@
     </tr>
   </thead>
   <tbody>
+    <?php $dbase->select_all(); ?>
     <tr>
       <th scope="row">1</th>
       <td>Mark</td>

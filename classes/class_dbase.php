@@ -52,7 +52,17 @@ class Dbase {
     $sql = "SELECT * FROM `bmi_data`";
     $result = $this->conn->query($sql);
     while ($row = $result->fetch_assoc()) {
-      echo $row["firstname"] . "<br>";
+      // Maak hier een <tr><td> constructie voor de table op index.php
+      echo "<tr>
+              <th scope='row'>".$row["id"] ."</th>
+              <td>".$row["firstname"] ."</td>
+              <td>".$row["infix"] ."</td>
+              <td>".$row["lastname"] ."</td>
+              <td>".$row["bodymass"] ."</td>
+              <td>".$row["bodylength"] ."</td>
+              <td>".$row["age"] ."</td>
+              <td>".$row["gender"] ."</td>
+            </tr>";
     }
   }
 }
