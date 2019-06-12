@@ -4,5 +4,5 @@
 
   $dbase = new Dbase();
   $dbase->insert_record($_POST);
-
+  
 ?>

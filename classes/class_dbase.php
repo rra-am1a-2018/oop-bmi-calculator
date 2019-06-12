@@ -50,6 +50,10 @@ class Dbase {
 
   public function select_all() {
     $sql = "SELECT * FROM `bmi_data`";
+    $result = $this->conn->query($sql);
+    while ($row = $result->fetch_assoc()) {
+      echo $row["firstname"] . "<br>";
+    }
   }
 }
 
